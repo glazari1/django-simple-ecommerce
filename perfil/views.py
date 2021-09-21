@@ -94,7 +94,6 @@ class Criar(BasePerfil):
 
             if not self.perfil:
                 self.perfilform.cleaned_data['usuario'] = usuario
-                print(self.perfilform.cleaned_data)
                 perfil = models.Perfil(**self.perfilform.cleaned_data)
                 perfil.save()
             else:
